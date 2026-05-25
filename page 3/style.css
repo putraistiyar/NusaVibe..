@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #020617;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0 20px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 0;
+  z-index: 1000;
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: #d4af37;
+}
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+}
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #f8ce46;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f8ce46;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* --- HERO SECTION --- */
+header {
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url(banner.jpg);
+
+}
+
+.headline {
+  color: #001F3F;
+  filter: brightness(120%);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.team-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  overflow-x: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-item {
+  flex: 0 0 300px;
+  max-width: 300px;
+
+}
+
+
+.team-item :hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in, box-shadow 0.3s ease-in;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+}
+
+.team-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.border {
+  border: #ffd700 solid 2px;
+  border-radius: 15px;
+}
+
+
+.footer {
+  background-color: black;
+}
+
+.footer .social-icon {
+  font-size: 1.6rem;
+  color: var(--accent);
+  transition: 0.3s;
+}
+
+.footer .social-icon:hover {
+  color: #fff;
+}
